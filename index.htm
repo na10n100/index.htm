@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة جدوى شركة أريب نجد للخدمات اللوجستية</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo for Arabic, Inter for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Use Cairo for Arabic, Inter for English */
+        :lang(ar) {
+            font-family: 'Cairo', sans-serif;
+        }
+        :lang(en) {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for a better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+        /* Style for section headers */
+        h2 {
+           font-weight: 700;
+        }
+        /* Custom styles for tables */
+        :lang(ar) th, :lang(en) th {
+            background-color: #e0f2fe;
+            color: #0c4a6e;
+        }
+        /* Gantt Chart Styles */
+        .gantt-bar {
+            transition: all 0.3s ease;
+        }
+        .gantt-bar:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+        }
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="lang-switcher" class="bg-white shadow-lg rounded-full px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50 transition-transform duration-300 transform hover:scale-105">
+            English
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Arabic Content -->
+        <div id="ar-content">
+            <!-- Header Section -->
+            <header class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8 text-center border-t-8 border-blue-500">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-blue-800 mb-4">دراسة جدوى شركة أريب نجد للخدمات اللوجستية</h1>
+                <p class="text-lg text-slate-600 mb-6">الخطة التنفيذية الشاملة</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 text-slate-500">
+                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-full">
+                        <span>رأس المال:</span>
+                        <span>80,000,000 ريال</span>
+                    </div>
+                    <div class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded-full">
+                        <span>المدة:</span>
+                        <span>12 أشهر</span>
+                    </div>
+                    <div class="bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-full">
+                        <span>التاريخ:</span>
+                        <span>16/06/2025</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar for Table of Contents -->
+                <aside class="lg:col-span-1 lg:sticky top-8 self-start">
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 border-b-2 border-slate-200 pb-2">فهرس الدراسة</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#introduction_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">1. مقدمة</a></li>
+                            <li><a href="#strategic_plan_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">2. الخطة الاستراتيجية</a></li>
+                            <li><a href="#swot_analysis_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">3. تحليل SWOT</a></li>
+                            <li><a href="#market_study_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">4. الدراسة السوقية</a></li>
+                            <li><a href="#technical_study_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">5. الدراسة الفنية</a></li>
+                            <li><a href="#costs_revenues_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">6. الدراسة المالية</a></li>
+                            <li><a href="#executive_plan_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">7. الخطة التنفيذية</a></li>
+                             <li><a href="#risk_analysis_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">8. تحليل المخاطر</a></li>
+                            <li><a href="#budget_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">9. الميزانية التقديرية</a></li>
+                            <li><a href="#kpis_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">10. مؤشرات الأداء (KPIs)</a></li>
+                            <li><a href="#improvements_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">11. التحسينات المقترحة</a></li>
+                            <li><a href="#conclusion_ar" class="block text-slate-600 hover:text-blue-600 hover:translate-x-[-4px] transition-all duration-300">12. الخاتمة</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Content Area -->
+                <main class="lg:col-span-3 space-y-12">
+                    <section id="introduction_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">1. مقدمة</h2><p class="text-slate-700 leading-relaxed mb-4">في ظل النمو الاقتصادي المتسارع الذي تشهده المملكة العربية السعودية، والدفع القوي نحو تحقيق أهداف رؤية 2030 والاستراتيجية الوطنية للنقل والخدمات اللوجستية (NTLS)، يبرز قطاع الخدمات اللوجستية كأحد أهم الركائز الأساسية لدعم التنوع الاقتصادي وتحويل المملكة إلى مركز لوجستي عالمي. يأتي مشروع "أريب نجد" ليواكب هذا التطور، مقدماً حلولاً مبتكرة ومتكاملة في مجال النقل والتخزين والتوزيع، ومستفيداً من أحدث التقنيات لضمان الكفاءة والجودة.</p><div class="grid md:grid-cols-2 gap-6 mt-6"><div class="bg-slate-50 p-4 rounded-lg border-r-4 border-blue-500"><h4 class="font-bold text-slate-800 mb-2">موقع المشروع</h4><p class="text-slate-600">سيُقام المشروع في منطقة القصيم، والتي تُعتبر واحدة من المواقع الإستراتيجية في المملكة.</p></div><div class="bg-slate-50 p-4 rounded-lg border-r-4 border-green-500"><h4 class="font-bold text-slate-800 mb-2">نوع المشروع</h4><p class="text-slate-600">شركة خدمية تجارية متخصصة في تقديم خدمات لوجستية متكاملة.</p></div></div><div class="mt-6"><h4 class="font-bold text-slate-800 mb-3 text-xl">أهداف ومزايا المشروع:</h4><ul class="list-disc pr-5 space-y-2 text-slate-700"><li>تحقيق التميز في تقديم خدمات النقل والتخزين.</li><li>تعزيز مفهوم الاستدامة.</li><li>دعم الاقتصاد المحلي.</li><li>تقديم خدمات متخصصة في نقل المنتجات الغذائية.</li><li>إدارة سلاسل الإمداد بشكل مرن وسريع.</li></ul></div></section>
+                    <section id="strategic_plan_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">2. الخطة الاستراتيجية</h2><div class="space-y-6"><div class="p-4 bg-blue-50 rounded-lg"><h4 class="font-bold text-blue-800 text-lg mb-2">الرؤية</h4><p class="text-slate-700">أن نكون الشركة الرائدة والموثوقة في تقديم حلول لوجستية مبتكرة ومستدامة في المملكة العربية السعودية، والمساهم الأول في تحقيق أهداف الاستراتيجية الوطنية للنقل والخدمات اللوجستية.</p></div><div class="p-4 bg-green-50 rounded-lg"><h4 class="font-bold text-green-800 text-lg mb-2">الرسالة</h4><p class="text-slate-700">تقديم خدمات لوجستية شاملة ومتكاملة تشمل النقل والتخزين والتوزيع، مع الالتزام بأعلى معايير الجودة والسرعة، واستخدام التكنولوجيا لتعزيز كفاءة شركائنا وتحقيق رضا عملائنا.</p></div><div><h4 class="font-bold text-slate-800 text-xl mt-6 mb-3">الأهداف الاستراتيجية (SMART Goals):</h4><ul class="grid md:grid-cols-2 gap-4"><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg><span><strong>التوسع الجغرافي:</strong> تغطية 5 مدن رئيسية في المملكة خلال أول 18 شهراً من التشغيل.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg><span><strong>الابتكار التقني:</strong> تطبيق نظام إدارة المستودعات (WMS) ونظام تخطيط موارد المؤسسات (ERP) بالكامل خلال 12 شهراً.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.223a2 2 0 00.226 2.818l2.714 4.223a2 2 0 001.736.97h.085a2 2 0 002-2v-5z" /></svg><span><strong>رضا العملاء:</strong> تحقيق معدل رضا عملاء لا يقل عن 90% بنهاية السنة التشغيلية الأولى.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg><span><strong>الربحية:</strong> الوصول إلى نقطة التعادل خلال 24 شهراً وتحقيق هامش ربح صافي بنسبة 10% بنهاية السنة الثالثة.</span></li></ul></div></div></section>
+                    <section id="swot_analysis_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">3. تحليل SWOT</h2><div class="grid md:grid-cols-2 gap-6"><div class="bg-green-50 border-r-4 border-green-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-green-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>نقاط القوة</h4><ul class="list-disc pr-5 space-y-2 text-slate-600"><li>خبرة صاحب المشروع</li><li>شغف المستثمر</li><li>علاقات جيدة مع العملاء</li><li>موقع استراتيجي</li></ul></div><div class="bg-red-50 border-r-4 border-red-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-red-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>نقاط الضعف</h4><ul class="list-disc pr-5 space-y-2 text-slate-600"><li>مشروع ناشئ</li><li>صعوبة الحصول على تمويل</li><li>عدم وجود عملاء سابقين</li><li>تحديات تنافسية</li></ul></div><div class="bg-blue-50 border-r-4 border-blue-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-blue-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>الفرص</h4><ul class="list-disc pr-5 space-y-2 text-slate-600"><li>دعم حكومي</li><li>نمو اقتصادي ورؤية 2030</li><li>التحول الرقمي</li><li>نمو التجارة الإلكترونية</li></ul></div><div class="bg-orange-50 border-r-4 border-orange-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-orange-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>التهديدات</h4><ul class="list-disc pr-5 space-y-2 text-slate-600"><li>ارتفاع تكاليف التشغيل</li><li>منافسة شديدة</li><li>تغيرات في القوانين</li><li>التقلبات الاقتصادية</li></ul></div></div></section>
+                    <section id="market_study_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">4. الدراسة السوقية</h2>
+                        <div class="space-y-6">
+                            <div><h3 class="text-xl font-semibold text-slate-800">حجم السوق والنمو</h3><p class="text-slate-700 leading-relaxed mt-2">من المتوقع أن يصل حجم سوق الخدمات اللوجستية في السعودية إلى حوالي 105 مليار ريال بحلول عام 2027، بمعدل نمو سنوي مركب (CAGR) يبلغ 6.7%. هذا النمو مدفوع بالاستثمارات الحكومية الضخمة في البنية التحتية، ونمو قطاع التجارة الإلكترونية، وزيادة الأنشطة الصناعية.</p></div>
+                            <div><h3 class="text-xl font-semibold text-slate-800">الشرائح المستهدفة</h3><ul class="list-disc pr-5 mt-2 space-y-2 text-slate-700"><li><strong>التجارة الإلكترونية:</strong> تحتاج إلى حلول توصيل للميل الأخير (Last-Mile Delivery) سريعة وموثوقة، وإدارة المرتجعات بكفاءة.</li><li><strong>قطاع التجزئة:</strong> يتطلب إدارة المخزون وتوزيع البضائع من المستودعات المركزية إلى الفروع المختلفة.</li><li><strong>القطاع الصناعي:</strong> يحتاج إلى نقل المواد الخام والمنتجات النهائية، وخدمات التخزين المتخصصة.</li><li><strong>قطاع الأغذية والمشروبات:</strong> يتطلب حلول نقل مبرد (Cold Chain) للحفاظ على جودة المنتجات.</li></ul></div>
+                            <div><h3 class="text-xl font-semibold text-slate-800">تحليل المنافسين</h3><p class="text-slate-700 leading-relaxed mt-2">السوق يتميز بوجود لاعبين كبار مثل "نقــل إكسبرس"، "سمسا"، و"أرامكس"، بالإضافة إلى شركات ناشئة متخصصة. تتميز "أريب نجد" بالتركيز على التكنولوجيا المتقدمة، وخدمة العملاء المخصصة، والمرونة في تلبية احتياجات القطاعات المختلفة.</p></div>
+                        </div>
+                    </section>
+                    <section id="technical_study_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">5. الدراسة الفنية</h2>
+                        <div class="space-y-6">
+                             <div><h3 class="text-xl font-semibold text-slate-800">الحلول التقنية (Technology Stack)</h3><p class="text-slate-700 leading-relaxed mt-2">سيعتمد المشروع على حزمة تقنية متكاملة تشمل نظام تخطيط موارد المؤسسات (ERP) مثل SAP أو Oracle، ونظام إدارة المستودعات (WMS)، ونظام إدارة النقل (TMS) الذي يستخدم الذكاء الاصطناعي لتحسين المسارات.</p></div>
+                             <div><h3 class="text-xl font-semibold text-slate-800">أسطول النقل</h3><p class="text-slate-700 leading-relaxed mt-2">سيتم بناء أسطول متنوع يضم دراجات نارية للتوصيل السريع داخل المدن، شاحنات صغيرة (دينا) للنقل المتوسط، وشاحنات ثقيلة مبردة وغير مبردة لتلبية احتياجات كافة القطاعات.</p></div>
+                              <div><h3 class="text-xl font-semibold text-slate-800">عمليات المستودعات</h3><p class="text-slate-700 leading-relaxed mt-2">ستتبع العمليات دورة متكاملة: استلام الشحنات وتصنيفها، التخزين الذكي باستخدام نظام WMS، عمليات الانتقاء والتغليف، وأخيراً جدولة الشحنات وتوزيعها بكفاءة.</p></div>
+                        </div>
+                    </section>
+                    <section id="costs_revenues_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">6. الدراسة المالية</h2>
+                        <div><h3 class="text-xl font-semibold text-slate-800 mb-3">توقعات الإيرادات (5 سنوات)</h3>
+                        <p class="text-slate-600 mb-4">تعتمد التوقعات على نمو سنوي بنسبة 20% في أول 3 سنوات، مدفوعاً بالتوسع الجغرافي واكتساب عملاء جدد، ثم يستقر النمو عند 15% سنوياً.</p>
+                        <div class="overflow-x-auto"><table class="w-full text-sm text-center text-slate-500 rounded-lg overflow-hidden"><thead class="text-xs text-slate-700 uppercase"><tr><th class="px-4 py-2">السنة</th><th class="px-4 py-2">الإيرادات المتوقعة (ريال)</th></tr></thead><tbody><tr class="bg-white border-b"><td class="px-4 py-2">1</td><td class="px-4 py-2">244,176,000</td></tr><tr class="bg-slate-50 border-b"><td class="px-4 py-2">2</td><td class="px-4 py-2">293,011,200</td></tr><tr class="bg-white border-b"><td class="px-4 py-2">3</td><td class="px-4 py-2">351,613,440</td></tr><tr class="bg-slate-50 border-b"><td class="px-4 py-2">4</td><td class="px-4 py-2">404,355,456</td></tr><tr class="bg-white"><td class="px-4 py-2">5</td><td class="px-4 py-2">465,008,774</td></tr></tbody></table></div>
+                        </div>
+                         <div class="mt-8"><h3 class="text-xl font-semibold text-slate-800 mb-3">تحليل نقطة التعادل</h3><p class="text-slate-700 leading-relaxed">بناءً على التكاليف الثابتة وهامش المساهمة، من المتوقع أن يصل المشروع إلى نقطة التعادل عندما يحقق إيرادات تقارب 280 مليون ريال سنوياً، وهو هدف قابل للتحقيق خلال السنة الثانية من التشغيل.</p></div>
+                    </section>
+                    <section id="executive_plan_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">7. الخطة التنفيذية (مخطط جانت)</h2>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-12 gap-2 text-center text-xs font-bold text-slate-600 mb-2">
+                                <div class="col-span-2">المرحلة</div>
+                                <script>for(let i=1; i<=12; i++) document.write(`<div class="hidden md:block">${'شهر ' + i}</div>`)</script>
+                                <div class="col-span-10 md:hidden">الجدول الزمني</div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-right md:text-center">التخطيط</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-blue-500 h-6 rounded-md" style="grid-column: 1 / span 2;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-right md:text-center">التأسيس</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-cyan-500 h-6 rounded-md" style="grid-column: 3 / span 4;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-right md:text-center">التوظيف</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-teal-500 h-6 rounded-md" style="grid-column: 7 / span 2;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-right md:text-center">الاختبار</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-amber-500 h-6 rounded-md" style="grid-column: 9 / span 2;"></div></div>
+                            </div>
+                             <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-right md:text-center">الإطلاق</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-green-500 h-6 rounded-md" style="grid-column: 11 / span 2;"></div></div>
+                            </div>
+                        </div>
+                    </section>
+                     <section id="risk_analysis_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">8. تحليل المخاطر واستراتيجيات التخفيف</h2>
+                        <div class="space-y-4">
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-right p-4 font-semibold flex justify-between items-center"><span>المخاطر التشغيلية</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>الخطر:</strong> تأخر عمليات التسليم بسبب الأعطال أو الازدحام المروري.<br><strong>التخفيف:</strong> استخدام أنظمة تتبع وصيانة وقائية للأسطول، وتطبيق أنظمة تحسين المسارات لتجنب الازدحام.</p></div></div>
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-right p-4 font-semibold flex justify-between items-center"><span>المخاطر المالية</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>الخطر:</strong> تقلب أسعار الوقود مما يؤثر على هوامش الربح.<br><strong>التخفيف:</strong> تطبيق آلية تعديل أسعار مرتبطة بأسعار الوقود، والاستثمار في مركبات كهربائية على المدى الطويل.</p></div></div>
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-right p-4 font-semibold flex justify-between items-center"><span>مخاطر السوق</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>الخطر:</strong> دخول منافسين جدد بأسعار منخفضة.<br><strong>التخفيف:</strong> التميز عبر جودة الخدمة، والتكنولوجيا المتقدمة، وتقديم خدمات ذات قيمة مضافة لا تقتصر على السعر فقط.</p></div></div>
+                        </div>
+                    </section>
+                    <section id="budget_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">9. الميزانية التقديرية</h2>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                             <div class="space-y-4">
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">البنية التحتية</span><span class="font-bold text-blue-600">30,000,000 ريال</span></div>
+                                <div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="font-semibold text-slate-700">المعدات والآلات</span><span class="font-bold text-blue-600">25,000,000 ريال</span></div>
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">التوظيف والتدريب</span><span class="font-bold text-blue-600">10,000,000 ريال</span></div>
+                                <div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="font-semibold text-slate-700">التسويق</span><span class="font-bold text-blue-600">5,000,000 ريال</span></div>
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">احتياطي الطوارئ</span><span class="font-bold text-blue-600">10,000,000 ريال</span></div>
+                                <div class="flex justify-between items-center p-4 bg-blue-800 text-white rounded-lg mt-4"><span class="text-lg font-bold">إجمالي الميزانية</span><span class="text-xl font-extrabold">80,000,000 ريال</span></div>
+                            </div>
+                            <div class="w-full max-w-sm mx-auto">
+                                <canvas id="budgetChart_ar"></canvas>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="kpis_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">10. مؤشرات الأداء (KPIs)</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                            <div class="bg-blue-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-blue-600 mb-1">>90%</div><div class="text-slate-700">رضا العملاء</div></div>
+                            <div class="bg-green-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-green-600 mb-1">>95%</div><div class="text-slate-700">الكفاءة التشغيلية</div></div>
+                            <div class="bg-yellow-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-yellow-600 mb-1">+5</div><div class="text-slate-700">مدن جديدة سنويًا</div></div>
+                            <div class="bg-purple-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-purple-600 mb-1">>15%</div><div class="text-slate-700">هامش الربحية</div></div>
+                        </div>
+                    </section>
+                    <section id="improvements_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">11. التحسينات الفنية والمالية المقترحة</h2>
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-4">أولاً: التحسينات الفنية</h3>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" /></svg><span><strong>تحسين المسارات بالذكاء الاصطناعي (AI):</strong> استخدام برمجيات متقدمة لتحليل البيانات المرورية واختيار أسرع وأكفأ المسارات.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v10zM4 7a1 1 0 00-1.447.894l-2 4A1 1 0 001 13h2a1 1 0 001-1V7z" /></svg><span><strong>نظام فرز آلي للمستودعات:</strong> تطبيق أنظمة فرز آلية لزيادة سرعة معالجة الطرود وتقليل الأخطاء.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.074 6.804 5 7 5c.276 0 .54.102.747.276a.75.75 0 010 1.06l-2.47 2.471a.75.75 0 000 1.061l2.47 2.471a.75.75 0 11-1.06 1.06l-2.706-2.706a6.012 6.012 0 01-1.631-4.243zM12 5c.276 0 .54.102.747.276a.75.75 0 010 1.06l-2.47 2.471a.75.75 0 000 1.061l2.47 2.471a.75.75 0 11-1.06 1.06l-2.706-2.706a6.012 6.012 0 01-1.631-4.243z" clip-rule="evenodd" /></svg><span><strong>إنترنت الأشياء (IoT) للمراقبة:</strong> تجهيز المركبات بحساسات لمراقبة درجة حرارة الشحنات والصيانة الوقائية.</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-4">ثانياً: التحسينات المالية</h3>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4a1 1 0 01-.8 1.6H6a3 3 0 01-3-3V6z" /></svg><span><strong>تحليل نقطة التعادل:</strong> تحديد الحجم الأدنى من العمليات اللازم لتغطية التكاليف.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.562 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a2 2 0 00-.8 1.4z" /></svg><span><strong>نموذج التسعير الديناميكي:</strong> تطبيق نظام تسعير مرن لتعظيم الإيرادات.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg><span><strong>إدارة المخاطر المالية:</strong> وضع استراتيجيات للتحوط ضد تقلبات أسعار الوقود وتنويع الإيرادات.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="conclusion_ar" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">12. الخاتمة</h2><p class="text-slate-700 leading-relaxed mb-4">تثبت دراسة الجدوى الشاملة أن مشروع "أريب نجد" يمتلك مقومات قوية للنجاح والريادة في قطاع الخدمات اللوجستية السعودي. بفضل المواءمة مع رؤية 2030، والخطة التشغيلية القوية، والتركيز على الابتكار التكنولوجي، فإن المشروع لا يمثل فرصة استثمارية واعدة فحسب، بل هو مساهم أساسي في تطوير البنية التحتية اللوجستية للمملكة. ومع تطبيق التحسينات المقترحة وإدارة المخاطر بفعالية، فإن الشركة مهيأة لتحقيق نمو مستدام وعوائد مجدية.</p><div class="mt-6 p-4 bg-green-50 text-green-800 rounded-lg border-r-4 border-green-500"><p><span class="font-bold">توصية:</span> المشروع واعد ويُنصح بالبدء في تنفيذه مع التركيز على بناء الشراكات وتعزيز التكنولوجيا.</p></div></section>
+                </main>
+            </div>
+             <footer class="text-center mt-12 py-4 text-slate-500 text-sm"><p>&copy; 2025 شركة أريب نجد للخدمات اللوجستية. جميع الحقوق محفوظة.</p></footer>
+        </div>
+
+        <!-- English Content -->
+        <div id="en-content" class="hidden">
+            <!-- Header Section -->
+            <header class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8 text-center border-t-8 border-blue-500">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-blue-800 mb-4">Areeb Najd Logistics Co. Feasibility Study</h1>
+                <p class="text-lg text-slate-600 mb-6">Comprehensive Executive Plan</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 text-slate-500">
+                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-full">
+                        <span>Capital:</span>
+                        <span>80,000,000 SAR</span>
+                    </div>
+                    <div class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded-full">
+                        <span>Duration:</span>
+                        <span>12 Months</span>
+                    </div>
+                    <div class="bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-full">
+                        <span>Date:</span>
+                        <span>16/06/2025</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                 <!-- Sidebar for Table of Contents -->
+                <aside class="lg:col-span-1 lg:sticky top-8 self-start">
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 border-b-2 border-slate-200 pb-2">Study Index</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#introduction_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">1. Introduction</a></li>
+                            <li><a href="#strategic_plan_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">2. Strategic Plan</a></li>
+                            <li><a href="#swot_analysis_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">3. SWOT Analysis</a></li>
+                            <li><a href="#market_study_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">4. Market Study</a></li>
+                            <li><a href="#technical_study_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">5. Technical Study</a></li>
+                            <li><a href="#costs_revenues_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">6. Financial Study</a></li>
+                            <li><a href="#executive_plan_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">7. Executive Plan</a></li>
+                             <li><a href="#risk_analysis_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">8. Risk Analysis</a></li>
+                            <li><a href="#budget_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">9. Estimated Budget</a></li>
+                            <li><a href="#kpis_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">10. Key Performance Indicators (KPIs)</a></li>
+                            <li><a href="#improvements_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">11. Proposed Improvements</a></li>
+                            <li><a href="#conclusion_en" class="block text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-300">12. Conclusion</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <!-- Content Area -->
+                <main class="lg:col-span-3 space-y-12">
+                    <section id="introduction_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">1. Introduction</h2><p class="text-slate-700 leading-relaxed mb-4">Amidst the rapid economic growth in Saudi Arabia and the strong push towards achieving Vision 2030 and the National Transport and Logistics Strategy (NTLS), the logistics sector emerges as a cornerstone for economic diversification and transforming the Kingdom into a global logistics hub. The "Areeb Najd" project is designed to align with this development, offering innovative and integrated solutions in transport, storage, and distribution, leveraging the latest technology to ensure efficiency and quality.</p><div class="grid md:grid-cols-2 gap-6 mt-6"><div class="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500"><h4 class="font-bold text-slate-800 mb-2">Project Location</h4><p class="text-slate-600">The project will be based in the Qassim region, a strategic location within the Kingdom.</p></div><div class="bg-slate-50 p-4 rounded-lg border-l-4 border-green-500"><h4 class="font-bold text-slate-800 mb-2">Project Type</h4><p class="text-slate-600">A commercial service company specializing in integrated logistics services.</p></div></div><div class="mt-6"><h4 class="font-bold text-slate-800 mb-3 text-xl">Project Goals & Advantages:</h4><ul class="list-disc pl-5 space-y-2 text-slate-700"><li>Achieve excellence in transport and storage services.</li><li>Promote sustainability.</li><li>Support the local economy.</li><li>Provide specialized food transport services.</li><li>Manage supply chains flexibly and quickly.</li></ul></div></section>
+                    <section id="strategic_plan_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">2. Strategic Plan</h2><div class="space-y-6"><div class="p-4 bg-blue-50 rounded-lg"><h4 class="font-bold text-blue-800 text-lg mb-2">Vision</h4><p class="text-slate-700">To be the leading and trusted company in providing innovative and sustainable logistics solutions in Saudi Arabia, and the primary contributor to achieving the goals of the National Transport and Logistics Strategy.</p></div><div class="p-4 bg-green-50 rounded-lg"><h4 class="font-bold text-green-800 text-lg mb-2">Mission</h4><p class="text-slate-700">To provide comprehensive and integrated logistics services with the highest standards of quality and speed, using technology to enhance our partners' efficiency and achieve customer satisfaction.</p></div><div><h4 class="font-bold text-slate-800 text-xl mt-6 mb-3">Strategic Objectives (SMART Goals):</h4><ul class="grid md:grid-cols-2 gap-4"><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg><span><strong>Geographic Expansion:</strong> Cover 5 major cities in the Kingdom within the first 18 months.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg><span><strong>Tech Innovation:</strong> Fully implement WMS and ERP systems within 12 months.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.223a2 2 0 00.226 2.818l2.714 4.223a2 2 0 001.736.97h.085a2 2 0 002-2v-5z" /></svg><span><strong>Customer Satisfaction:</strong> Achieve a customer satisfaction rate of at least 90% by the end of the first year.</span></li><li class="bg-slate-50 p-3 rounded-md flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg><span><strong>Profitability:</strong> Reach break-even point within 24 months and achieve a 10% net profit margin by year three.</span></li></ul></div></div></section>
+                    <section id="swot_analysis_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">3. SWOT Analysis</h2><div class="grid md:grid-cols-2 gap-6"><div class="bg-green-50 border-l-4 border-green-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-green-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>Strengths</h4><ul class="list-disc pl-5 space-y-2 text-slate-600"><li>Owner's experience</li><li>Investor's passion</li><li>Good customer relations</li><li>Strategic location</li></ul></div><div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-red-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>Weaknesses</h4><ul class="list-disc pl-5 space-y-2 text-slate-600"><li>New startup</li><li>Difficulty in financing</li><li>No previous customers</li><li>Competitive challenges</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-blue-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>Opportunities</h4><ul class="list-disc pl-5 space-y-2 text-slate-600"><li>Government support</li><li>Economic growth & Vision 2030</li><li>Digital transformation</li><li>E-commerce growth</li></ul></div><div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><h4 class="font-bold text-xl text-orange-700 mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>Threats</h4><ul class="list-disc pl-5 space-y-2 text-slate-600"><li>High operating costs</li><li>Intense competition</li><li>Regulatory changes</li><li>Economic fluctuations</li></ul></div></div></section>
+                    <section id="market_study_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">4. Market Study</h2>
+                        <div class="space-y-6">
+                            <div><h3 class="text-xl font-semibold text-slate-800">Market Size & Growth</h3><p class="text-slate-700 leading-relaxed mt-2">The Saudi logistics market is projected to reach approximately 105 billion SAR by 2027, with a Compound Annual Growth Rate (CAGR) of 6.7%. This growth is driven by massive government infrastructure investments, the e-commerce boom, and increased industrial activities.</p></div>
+                             <div><h3 class="text-xl font-semibold text-slate-800">Target Segments</h3><ul class="list-disc pl-5 mt-2 space-y-2 text-slate-700"><li><strong>E-commerce:</strong> Requires fast and reliable last-mile delivery and efficient returns management.</li><li><strong>Retail Sector:</strong> Demands inventory management and distribution from central warehouses to various branches.</li><li><strong>Industrial Sector:</strong> Needs transport for raw materials and finished products, and specialized storage services.</li><li><strong>Food & Beverage Sector:</strong> Requires cold chain transport solutions to maintain product quality.</li></ul></div>
+                             <div><h3 class="text-xl font-semibold text-slate-800">Competitive Analysis</h3><p class="text-slate-700 leading-relaxed mt-2">The market features major players like Naqel Express, SMSA, and Aramex, alongside specialized startups. "Areeb Najd" will differentiate itself through advanced technology, personalized customer service, and flexibility in meeting diverse sectoral needs.</p></div>
+                        </div>
+                    </section>
+                    <section id="technical_study_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">5. Technical Study</h2>
+                        <div class="space-y-6">
+                             <div><h3 class="text-xl font-semibold text-slate-800">Technology Stack</h3><p class="text-slate-700 leading-relaxed mt-2">The project will rely on an integrated tech suite including an ERP system (like SAP or Oracle), a Warehouse Management System (WMS), and a Transportation Management System (TMS) that uses AI for route optimization.</p></div>
+                             <div><h3 class="text-xl font-semibold text-slate-800">Transport Fleet</h3><p class="text-slate-700 leading-relaxed mt-2">A diverse fleet will be built, comprising motorcycles for express city delivery, light-duty trucks (Dyna) for medium-haul, and refrigerated/non-refrigerated heavy trucks to serve all sectors.</p></div>
+                             <div><h3 class="text-xl font-semibold text-slate-800">Warehouse Operations</h3><p class="text-slate-700 leading-relaxed mt-2">Operations will follow an integrated cycle: receiving and sorting shipments, smart storage using WMS, picking and packing, and finally, efficient scheduling and dispatch.</p></div>
+                        </div>
+                    </section>
+                    <section id="costs_revenues_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">6. Financial Study</h2>
+                         <div><h3 class="text-xl font-semibold text-slate-800 mb-3">Revenue Forecast (5 Years)</h3>
+                        <p class="text-slate-600 mb-4">Projections are based on 20% annual growth for the first 3 years, driven by expansion and customer acquisition, stabilizing to 15% annually thereafter.</p>
+                        <div class="overflow-x-auto"><table class="w-full text-sm text-center text-slate-500 rounded-lg overflow-hidden"><thead class="text-xs text-slate-700 uppercase"><tr><th class="px-4 py-2">Year</th><th class="px-4 py-2">Projected Revenue (SAR)</th></tr></thead><tbody><tr class="bg-white border-b"><td class="px-4 py-2">1</td><td class="px-4 py-2">244,176,000</td></tr><tr class="bg-slate-50 border-b"><td class="px-4 py-2">2</td><td class="px-4 py-2">293,011,200</td></tr><tr class="bg-white border-b"><td class="px-4 py-2">3</td><td class="px-4 py-2">351,613,440</td></tr><tr class="bg-slate-50 border-b"><td class="px-4 py-2">4</td><td class="px-4 py-2">404,355,456</td></tr><tr class="bg-white"><td class="px-4 py-2">5</td><td class="px-4 py-2">465,008,774</td></tr></tbody></table></div>
+                        </div>
+                         <div class="mt-8"><h3 class="text-xl font-semibold text-slate-800 mb-3">Break-Even Analysis</h3><p class="text-slate-700 leading-relaxed">Based on fixed costs and contribution margin, the project is expected to reach its break-even point at approximately 280 million SAR in annual revenue, an achievable target within the second year of operation.</p></div>
+                    </section>
+                    <section id="executive_plan_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">7. Executive Plan (Gantt Chart)</h2>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-12 gap-2 text-center text-xs font-bold text-slate-600 mb-2">
+                                <div class="col-span-2">Phase</div>
+                                <script>for(let i=1; i<=12; i++) document.write(`<div class="hidden md:block">${'Month ' + i}</div>`)</script>
+                                <div class="col-span-10 md:hidden">Timeline</div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-left md:text-center">Planning</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-blue-500 h-6 rounded-md" style="grid-column: 1 / span 2;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-left md:text-center">Establishment</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-cyan-500 h-6 rounded-md" style="grid-column: 3 / span 4;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-left md:text-center">Hiring</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-teal-500 h-6 rounded-md" style="grid-column: 7 / span 2;"></div></div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-left md:text-center">Testing</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-amber-500 h-6 rounded-md" style="grid-column: 9 / span 2;"></div></div>
+                            </div>
+                             <div class="grid grid-cols-12 gap-2 items-center bg-slate-50 p-2 rounded-lg">
+                                <div class="col-span-12 md:col-span-2 text-sm font-semibold text-left md:text-center">Launch</div>
+                                <div class="col-span-12 md:col-span-10"><div class="gantt-bar bg-green-500 h-6 rounded-md" style="grid-column: 11 / span 2;"></div></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="risk_analysis_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">8. Risk Analysis & Mitigation Strategies</h2>
+                        <div class="space-y-4">
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-left p-4 font-semibold flex justify-between items-center"><span>Operational Risks</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>Risk:</strong> Delivery delays due to breakdowns or traffic congestion.<br><strong>Mitigation:</strong> Use of fleet tracking and preventive maintenance systems, and applying route optimization to avoid traffic.</p></div></div>
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-left p-4 font-semibold flex justify-between items-center"><span>Financial Risks</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>Risk:</strong> Fuel price volatility affecting profit margins.<br><strong>Mitigation:</strong> Implement a fuel surcharge mechanism and invest in electric vehicles in the long term.</p></div></div>
+                            <div class="accordion-item bg-slate-50 rounded-lg"><button class="accordion-header w-full text-left p-4 font-semibold flex justify-between items-center"><span>Market Risks</span><svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="accordion-content px-4 pb-4 text-slate-600"><p><strong>Risk:</strong> New competitors entering with lower prices.<br><strong>Mitigation:</strong> Differentiate through service quality, advanced technology, and offering value-added services beyond just price.</p></div></div>
+                        </div>
+                    </section>
+                    <section id="budget_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">9. Estimated Budget</h2>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">Infrastructure</span><span class="font-bold text-blue-600">30,000,000 SAR</span></div>
+                                <div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="font-semibold text-slate-700">Equipment & Machinery</span><span class="font-bold text-blue-600">25,000,000 SAR</span></div>
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">Hiring & Training</span><span class="font-bold text-blue-600">10,000,000 SAR</span></div>
+                                <div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="font-semibold text-slate-700">Marketing</span><span class="font-bold text-blue-600">5,000,000 SAR</span></div>
+                                <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg"><span class="font-semibold text-slate-700">Contingency Reserve</span><span class="font-bold text-blue-600">10,000,000 SAR</span></div>
+                                <div class="flex justify-between items-center p-4 bg-blue-800 text-white rounded-lg mt-4"><span class="text-lg font-bold">Total Budget</span><span class="text-xl font-extrabold">80,000,000 SAR</span></div>
+                            </div>
+                             <div class="w-full max-w-sm mx-auto">
+                                <canvas id="budgetChart_en"></canvas>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="kpis_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">10. Key Performance Indicators (KPIs)</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                            <div class="bg-blue-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-blue-600 mb-1">>90%</div><div class="text-slate-700">Customer Satisfaction</div></div>
+                            <div class="bg-green-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-green-600 mb-1">>95%</div><div class="text-slate-700">Operational Efficiency</div></div>
+                            <div class="bg-yellow-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-yellow-600 mb-1">+5</div><div class="text-slate-700">New Cities Annually</div></div>
+                            <div class="bg-purple-100 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300"><div class="text-3xl font-bold text-purple-600 mb-1">>15%</div><div class="text-slate-700">Profit Margin</div></div>
+                        </div>
+                    </section>
+                    <section id="improvements_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">11. Proposed Technical & Financial Improvements</h2>
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-4">A. Technical Improvements</h3>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" /></svg><span><strong>AI Route Optimization:</strong> Use advanced software to analyze traffic data and select the most efficient routes.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v10zM4 7a1 1 0 00-1.447.894l-2 4A1 1 0 001 13h2a1 1 0 001-1V7z" /></svg><span><strong>Automated Warehouse Sorting:</strong> Implement automated systems to increase parcel processing speed.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.074 6.804 5 7 5c.276 0 .54.102.747.276a.75.75 0 010 1.06l-2.47 2.471a.75.75 0 000 1.061l2.47 2.471a.75.75 0 11-1.06 1.06l-2.706-2.706a6.012 6.012 0 01-1.631-4.243zM12 5c.276 0 .54.102.747.276a.75.75 0 010 1.06l-2.47 2.471a.75.75 0 000 1.061l2.47 2.471a.75.75 0 11-1.06 1.06l-2.706-2.706a6.012 6.012 0 01-1.631-4.243z" clip-rule="evenodd" /></svg><span><strong>IoT for Monitoring:</strong> Equip vehicles with sensors for temperature monitoring and predictive maintenance.</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-4">B. Financial Improvements</h3>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4a1 1 0 01-.8 1.6H6a3 3 0 01-3-3V6z" /></svg><span><strong>Break-Even Analysis:</strong> Determine the minimum volume of operations needed to cover costs.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.562 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a2 2 0 00-.8 1.4z" /></svg><span><strong>Dynamic Pricing Model:</strong> Implement a flexible pricing system to maximize revenue.</span></li>
+                                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg><span><strong>Financial Risk Management:</strong> Develop strategies to hedge against fuel price volatility and diversify revenue.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="conclusion_en" class="scroll-mt-24 bg-white rounded-2xl shadow-lg p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">12. Conclusion</h2><p class="text-slate-700 leading-relaxed mb-4">This comprehensive feasibility study confirms that the "Areeb Najd" project has strong fundamentals for success and leadership in the Saudi logistics sector. By aligning with Vision 2030, having a robust operational plan, and focusing on technological innovation, the project is not only a promising investment opportunity but also a key contributor to developing the Kingdom's logistics infrastructure. With effective implementation of proposed improvements and risk management, the company is poised for sustainable growth and significant returns.</p><div class="mt-6 p-4 bg-green-50 text-green-800 rounded-lg border-l-4 border-green-500"><p><span class="font-bold">Recommendation:</span> The project is promising and it is advised to proceed with implementation, focusing on building strategic partnerships and enhancing technology.</p></div></section>
+                </main>
+            </div>
+            <footer class="text-center mt-12 py-4 text-slate-500 text-sm"><p>&copy; 2025 Areeb Najd Logistics Co. All rights reserved.</p></footer>
+        </div>
+
+    </div>
+
+    <script>
+        // Chart, Accordion, and Language Switcher Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const switcher = document.getElementById('lang-switcher');
+            const arContent = document.getElementById('ar-content');
+            const enContent = document.getElementById('en-content');
+            const htmlTag = document.documentElement;
+            let budgetChartAr, budgetChartEn;
+
+            const budgetData = {
+                values: [30000000, 25000000, 10000000, 5000000, 10000000],
+                colors: ['#3b82f6', '#14b8a6', '#f59e0b', '#8b5cf6', '#64748b'],
+            };
+
+            const chartOptions = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            font: { family: "'Cairo', sans-serif" }
+                        }
+                    },
+                    tooltip: {
+                         bodyFont: { family: "'Cairo', sans-serif" },
+                        titleFont: { family: "'Cairo', sans-serif" }
+                    }
+                }
+            };
+            
+            const enChartOptions = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            font: { family: "'Inter', sans-serif" }
+                        }
+                    },
+                    tooltip: {
+                         bodyFont: { font: { family: "'Inter', sans-serif" } },
+                        titleFont: { font: { family: "'Inter', sans-serif" } }
+                    }
+                }
+            };
+
+            function createArabicChart() {
+                if(budgetChartAr) budgetChartAr.destroy();
+                const ctxAr = document.getElementById('budgetChart_ar').getContext('2d');
+                budgetChartAr = new Chart(ctxAr, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['البنية التحتية', 'المعدات والآلات', 'التوظيف والتدريب', 'التسويق', 'احتياطي'],
+                        datasets: [{ data: budgetData.values, backgroundColor: budgetData.colors, hoverOffset: 4 }]
+                    },
+                    options: chartOptions
+                });
+            }
+            
+            function createEnglishChart() {
+                 if(budgetChartEn) budgetChartEn.destroy();
+                const ctxEn = document.getElementById('budgetChart_en').getContext('2d');
+                budgetChartEn = new Chart(ctxEn, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Infrastructure', 'Equipment', 'Hiring & Training', 'Marketing', 'Reserve'],
+                        datasets: [{ data: budgetData.values, backgroundColor: budgetData.colors, hoverOffset: 4 }]
+                    },
+                    options: enChartOptions
+                });
+            }
+
+            // Accordion Logic
+            function setupAccordions() {
+                document.querySelectorAll('.accordion-header').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const accordionContent = button.nextElementSibling;
+                        button.querySelector('svg').classList.toggle('rotate-180');
+                        if (accordionContent.style.maxHeight) {
+                            accordionContent.style.maxHeight = null;
+                        } else {
+                            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                        } 
+                    });
+                });
+            }
+
+            const setLanguage = (lang) => {
+                if (lang === 'en') {
+                    htmlTag.lang = 'en';
+                    htmlTag.dir = 'ltr';
+                    arContent.classList.add('hidden');
+                    enContent.classList.remove('hidden');
+                    switcher.textContent = 'العربية';
+                    switcher.style.right = 'auto';
+                    switcher.style.left = '1rem';
+                    createEnglishChart();
+                } else {
+                    htmlTag.lang = 'ar';
+                    htmlTag.dir = 'rtl';
+                    enContent.classList.add('hidden');
+                    arContent.classList.remove('hidden');
+                    switcher.textContent = 'English';
+                    switcher.style.left = 'auto';
+                    switcher.style.right = '1rem';
+                    createArabicChart();
+                }
+                localStorage.setItem('language', lang);
+                setupAccordions(); // Re-initialize accordions on language change
+            };
+
+            switcher.addEventListener('click', () => {
+                const currentLang = htmlTag.lang;
+                setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+            });
+
+            const savedLang = localStorage.getItem('language') || 'ar';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
